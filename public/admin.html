@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <div id="adminLoginSection" class="card">
+      <h2>Admin Login</h2>
+      <input id="adminEmail" type="email" placeholder="Admin email" />
+      <input id="adminPassword" type="password" placeholder="Admin password" />
+      <button id="adminLoginBtn">Login as Admin</button>
+      <p class="muted">Default admin email: admin@aptitude.local</p>
+      <p class="muted">Default admin password: Admin@2026#</p>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+      <div class="topbar">
+        <strong id="adminWelcome"></strong>
+        <button id="adminLogoutBtn">Logout</button>
+      </div>
+
+      <div class="card">
+        <h2>Admin Actions</h2>
+        <button id="runSeedBtn">Run seed_questions.js</button>
+        <pre id="seedOutput" class="prebox"></pre>
+      </div>
+
+      <div class="card">
+        <h2>All Users</h2>
+        <div id="usersTable"></div>
+      </div>
+
+      <div class="card">
+        <h2>All Results</h2>
+        <div id="resultsTable"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

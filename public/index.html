@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aptitude Exam Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Aptitude Exam Platform</h1>
+
+    <div id="authSection" class="card">
+      <div class="grid2">
+        <div>
+          <h2>Register</h2>
+          <input id="regName" type="text" placeholder="Full name" />
+          <input id="regEmail" type="email" placeholder="Email" />
+          <input id="regPassword" type="password" placeholder="Password" />
+          <button id="registerBtn">Register</button>
+        </div>
+
+        <div>
+          <h2>Login</h2>
+          <input id="loginEmail" type="email" placeholder="Email" />
+          <input id="loginPassword" type="password" placeholder="Password" />
+          <button id="loginBtn">Login</button>
+          <div class="admin-box">
+            <p><strong>Admin page:</strong> /admin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="userSection" class="hidden">
+      <div class="topbar">
+        <div><strong id="welcomeText"></strong></div>
+        <button id="logoutBtn">Logout</button>
+      </div>
+
+      <div class="card">
+        <h2>Start Test</h2>
+        <div class="grid4">
+          <div>
+            <label>Topic</label>
+            <select id="topicSelect"></select>
+          </div>
+
+          <div>
+            <label>Difficulty</label>
+            <select id="difficultySelect">
+              <option value="All">All</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Questions</label>
+            <select id="questionCount">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Time</label>
+            <select id="timeSelect">
+              <option value="60">1 min</option>
+              <option value="120">2 min</option>
+              <option value="300" selected>5 min</option>
+              <option value="600">10 min</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="startBtn">Start Exam</button>
+      </div>
+
+      <div class="infobar">
+        <div id="questionTracker">Question 0 of 0</div>
+        <div id="timer">Time Left: 00:00</div>
+      </div>
+
+      <div id="quizContainer"></div>
+
+      <div id="navButtons" class="nav-buttons hidden">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="submitBtn">Submit Exam</button>
+      </div>
+
+      <div id="resultContainer"></div>
+
+      <div class="card">
+        <h2>My Previous Results</h2>
+        <div id="myResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
