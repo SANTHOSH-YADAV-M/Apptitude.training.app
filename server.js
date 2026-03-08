@@ -7,7 +7,7 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 const session = require("express-session");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const path = require("path");
 const { exec } = require("child_process");
 
